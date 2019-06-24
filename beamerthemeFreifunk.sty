@@ -1,0 +1,58 @@
+% general settings
+\usepackage{beamerthemedefault}
+\usepackage{fontspec}
+\defaultfontfeatures{LetterSpace=50}
+\usefonttheme{professionalfonts}
+\setmainfont{[assets/alternate_gothic_no2_d_regular.ttf]}
+\newcommand{\pagefont}{ \fontsize{4}{6}\selectfont}
+
+% define colors
+%\definecolor{freifunk-yellow}{RGB}{255,180,0}
+\definecolor{freifunk-magenta}{RGB}{220,0,103}
+\definecolor{freifunk-blue}{RGB}{0,158,224}
+
+\setbeamertemplate{headline}{%
+\begin{minipage}{0.3\textwidth}%
+	\vspace*{0.1cm}\hspace*{0.2cm}%
+	\includegraphics[height=1.5cm]{assets/logo.eps}%
+\end{minipage}%
+\begin{minipage}{0.7\textwidth}%
+	\vspace*{0.1cm}%
+	\pagefont\hfill%
+	\small\textbf{\insertshortdate~\insertshorttitle ~$\vert$~\insertshortauthor%
+	~$\vert$~\insertframenumber}\hspace*{0.2cm}\\ \bigskip	\smallskip%
+\end{minipage}%
+\vspace*{0.1cm}
+\newline
+\color{freifunk-magenta}\rule{\paperwidth}{1pt}%
+}
+
+% smaller textsize in nested items
+\beamertemplatedotitem
+
+% frametitle left-aligned, black and bold
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\normalsize}
+
+% set margins
+\setbeamersize{text margin left=0.73cm}
+
+% redefine Table of Contents 
+\newcommand{\toccur}{\frame{\frametitle{Table of Contents}\tableofcontents[current]}}
+\newcommand{\toc}{\frame{\frametitle{Table of Contents}\tableofcontents}}
+\setbeamertemplate{sections/subsections in toc}[default] %{\color{black}}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[square]
+
+% general information and improvement of default theme
+\setbeamercolor{structure}{fg=freifunk-blue}
+\setbeamercolor{section in toc}{fg=freifunk-blue}
+\setbeamercolor{subsection in toc}{parent=section in toc}
+\setbeamercolor{framesubtitle}{fg=freifunk-blue}
+
+% turn off navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% transparent effects
+\setbeamercovered{transparent}
