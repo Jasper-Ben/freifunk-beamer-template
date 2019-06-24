@@ -5,6 +5,8 @@
 \usefonttheme{professionalfonts}
 \setmainfont{[assets/alternate_gothic_no2_d_regular.ttf]}
 \newcommand{\pagefont}{ \fontsize{4}{6}\selectfont}
+%disable "Figure X:" in image caption
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}                                                                                                             
 
 % define colors
 %\definecolor{freifunk-yellow}{RGB}{255,180,0}
@@ -19,7 +21,7 @@
 \begin{minipage}{0.7\textwidth}%
 	\vspace*{0.1cm}%
 	\pagefont\hfill%
-	\small\textbf{\insertshortdate~\insertshorttitle ~$\vert$~\insertshortauthor%
+	\textbf{\insertshortdate~\insertshorttitle ~$\vert$~\insertshortauthor%
 	~$\vert$~\insertframenumber}\hspace*{0.2cm}\\ \bigskip	\smallskip%
 \end{minipage}%
 \vspace*{0.1cm}
